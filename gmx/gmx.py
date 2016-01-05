@@ -33,6 +33,11 @@ class Gmx():
                 mailbox.external_name = mailbox_name
                 self.mailboxes[mailbox_name] = mailbox
 
+    def use_mailbox(self, mailbox):
+        if mailbox:
+            self.imap.select(mailbox)
+        self.current_mailbox = mailbox
+
     def mailbox(self, mailbox_name):
         if mailbox_name not in self.mailboxes:
             mailbox_name = encode_utf7(mailbox_name)
