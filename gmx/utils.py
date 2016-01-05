@@ -1,13 +1,13 @@
 
 
-from .gmail import Gmail 
+from .gmx import Gmx
 
 def login(username, password):
-    gmail = Gmail()
-    gmail.login(username, password)
-    return gmail
+    gmx = Gmx()
+    gmx.login(username, password)
+    return gmx
 
 def authenticate(username, access_token):
-    gmail = Gmail()
-    gmail.authenticate(username, access_token)
-    return gmail
+    gmx = Gmx()
+    gmx.authenticate(username, access_token)
+    return gmx
