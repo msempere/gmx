@@ -20,7 +20,7 @@ class Gmx():
         self.current_mailbox = None
 
     def connect(self, raise_errors=True):
-        self.imap = imaplib.IMAP4_SSL(self.GMAIL_IMAP_HOST, self.GMAIL_IMAP_PORT)
+        self.imap = imaplib.IMAP4_SSL(self.GMX_IMAP_HOST, self.GMX_IMAP_PORT)
         return self.imap
 
 
